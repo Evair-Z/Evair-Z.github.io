@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>我的VLOG</title>
+		<link rel="stylesheet" type="text/css" href="css/generalStyle.css"/>
+		<link rel="stylesheet" type="text/css" href="css/myVlog.css"/>
+		<script src="js/general.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<iframe src="header.html" scrolling="no" frameborder="0" id="navObject"></iframe>
+		<div id="main">
+			<div class="video_contianer">
+				<video width="934" height="532" id="video_box" src="video/Vlog_01.mp4" autoplay="autoplay">
+					当前浏览器不支持 video直接播放
+				</video>
+			</div>
+			<div class="video_view_box">
+				<div class="video_view_1" onclick="changeToVideo_1()">
+					<div class="img_shadow">
+						<img class="video_img" src="./img/myPhoto/item_img%20(21).jpg" >
+					</div>
+					<h4>打卡茶颜悦色幽兰拿铁</h4>
+					<p>是一家只在长沙才有的奶茶店<br>打卡只有零次和无数次</p>
+				</div>
+				<div class="video_view_2" onclick="changeToVideo_2()">
+					<div class="img_shadow">
+						<img class="video_img" src="./img/myPhoto/item_img%20(40).jpg" >
+					</div>
+					<h4>文和友老长沙龙虾馆</h4>
+					<p>据说建这栋楼斥资一亿耗时八年<br>当然是要试一试（来都来了（狗头</p>
+				</div>
+				<div class="video_view_3" onclick="changeToVideo_3()">
+					<div class="img_shadow">
+						<img class="video_img" src="./img/myPhoto/item_img%20(33).jpg" >
+					</div>
+					<h4>在长沙怎么能不试试臭豆腐呢</h4>
+					<p>太平街的夜景好好看呀呀呀呀呀呀</p>
+				</div>
+				<div class="video_controls">
+					<div class="time">
+						<span id="currentTime">当前时长</span>
+						<span>|</span>
+						<span id="totalTime">总时长</span>
+					</div>
+					<div class="video_controls_buttons">
+						<button onclick="PlayorPause()" id="PlayOrPause">暂停</button>
+						<button onclick="addVolume()">音量<br>+</button>
+						<button onclick="minVolume()">音量<br>-</button>
+						<button onclick="setMuted()" id="mymuted">静音</button>
+						<button onclick="setForward()">快进</button>
+						<button onclick="setBackward()">快退</button>
+						<button onclick="addSpeed()">2倍速</button>
+						<button onclick="normalSpeed()">1倍速</button>
+						<button onclick="minSpeed()">0.5倍速</button>
+					</div>
+				</div>
+				<script>
+					//切换视频-start
+					function changeToVideo_1() {
+						var video = document.getElementById("video_box")
+						video.setAttribute("src", "video/Vlog_01.mp4");
+					}
+					
+					function changeToVideo_2() {
+						var video = document.getElementById("video_box")
+						video.setAttribute("src", "video/Vlog_02.mp4");
+					}
+					
+					function changeToVideo_3() {
+						var video = document.getElementById("video_box")
+						video.setAttribute("src", "video/Vlog_03.mp4");
+					}
+					// 切换视频-end
+					
+					// 视频控制器-strat
+					var video = document.getElementById("video_box")
+					function PlayorPause(){
+						if(video.paused){
+							document.getElementById("PlayOrPause").innerHTML="暂停";
+							video.play();
+						}
+						else{
+							document.getElementById("PlayOrPause").innerHTML="播放";
+							video.pause();
+						}
+					}
+					function addVolume(){
+						video.volume += 0.1;
+					}
+					function minVolume(){
+						video.volume -= 0.1;
+					}
+					function setMuted(){
+						if(video.muted){
+							document.getElementById("mymuted").innerHTML="静音";
+							video.muted=false;
+						}
+						else{
+							document.getElementById("mymuted").innerHTML="取消静音";
+							video.muted=true;
+						}
+					}
+					function setForward(){
+						video.currentTime += 5;
+					}
+					function setBackward(){
+						video.currentTime -= 5;
+					}
+					function addSpeed(){
+						video.playbackRate = 2;
+					}
+					function normalSpeed(){
+						video.playbackRate = 1;
+					}
+					function minSpeed(){
+						video.playbackRate = 0.5;
+					}
+					video.ontimeupdate = function getTotalTime(){
+						var strCurrentTime =RunTime(parseInt(video.currentTime/60)) + ":" + RunTime(parseInt(video.currentTime%60));
+						var strTotalTime = RunTime(parseInt(video.duration/60)) + ":" + RunTime(parseInt(video.duration%60));
+						document.getElementById("currentTime").innerHTML = strCurrentTime;
+						document.getElementById("totalTime").innerHTML = strTotalTime;
+					}
+					function RunTime(num){
+						 var len = num.toString().length;
+						 while(len<2){
+							num = "0" + num;
+							len++;
+						 }
+						 return num;
+					}
+					// 视频控制器-end
+				</script>
+			</div>
+		</div>
+	</body>
+</html>

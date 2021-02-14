@@ -1,0 +1,113 @@
+*{//border: 1px solid red;}
+body{
+	background-color: #F5F5F5;
+}
+h3{
+	margin: 50px auto;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 100;
+	position: relative;
+	width: max-content;
+}
+#dotLeft,#dotRight {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: #C00000;
+	border-radius: 10px;
+	position: absolute;
+}
+
+#dotLeft{
+	top: 15px;
+	left: -30px;
+}
+
+#dotRight{
+	top: 15px;
+	right: -30px;
+}
+h4{
+	margin: 40px auto 20px;
+}
+form{
+	width: max-content;
+	margin: 10px auto;
+}
+input{
+	background-color: #F5F5F5;
+	border: 1px solid #DADADA;
+	outline: none;
+}
+.title{
+	display: inline-block;
+	width: 100px;
+	//border: 1px solid red;
+	color: #5E5E5E;
+}
+p{
+	line-height: 3em;
+}
+.content{
+	display: inline-block;
+	width: 250px;
+	color: #5E5E5E;
+	//border: 1px solid red;
+}
+.content input{
+	height: 30px;
+	width: 100%;
+	border-radius: 30px;
+	text-align: center;
+	color: #5E5E5E;
+	font-size: 14px;
+	transition: all ease-in-out 0.2s;
+}
+.content input:focus{
+	border: 2px solid #C00000;
+}
+.content input[type="radio"], input[type="checkbox"]{
+	height: min-content;
+	width: min-content;
+}
+.content input[type="radio"]{
+	margin: 0 20px 0 40px;
+}
+.content input[type="checkbox"]{
+	margin-right: 8px;
+}
+.sumbitPart{
+	margin: 40px auto;
+	width: max-content;
+	height: 150px;
+	color: black;
+	font-weight: bold;
+	//border: 1px solid red;
+}
+.sumbitPart input[type="submit"], input[type="reset"]{
+	width: 100px;
+	height: 40px;
+	border-radius: 40px;
+	cursor: pointer;
+	border: none;
+	transition: all ease-in-out 0.2s;
+}
+.sumbitPart input[type="submit"]{
+	background-color: aquamarine;
+	font-weight: bold;
+	color: black;
+	float: left;
+}
+.sumbitPart input[type="reset"]{
+	background-color: #C00000;
+	font-weight: bold;
+	color: #F5F5F5;
+	float: right;
+}
+.sumbitPart input[type="submit"]:hover{
+	box-shadow: 0px 5px 20px 0px #7FFFD4;
+}
+.sumbitPart input[type="reset"]:hover{
+	box-shadow: 0px 5px 20px 0px #FFC4C4;
+}

@@ -1,0 +1,19 @@
+body{
+	background-color: #F5F5F5;
+}
+.main{
+	margin-top: 200px;
+}
+p{
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 2px;
+	line-height: 2em;
+}
+a{
+	color: #C00000;
+	font-weight: bold;
+}
+a:hover{
+	color: orange;
+}

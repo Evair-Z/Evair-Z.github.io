@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>注册</title>
+		<link rel="stylesheet" type="text/css" href="css/generalStyle.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<script type="text/javascript" src="js/register.js"></script>
+	</head>
+	<body>
+		<h3><div id="dotLeft"></div>从这里开始，注册成为会员<div id="dotRight"></div></h3>
+		<form action="register-succeed.html" method="get" onsubmit="return pwdCheck();">
+			<div class="accountPart">
+				<h4>账户信息</h4>
+				<p>
+					<span class="title">ID账号</span>
+					<span class="content"><input type="text" name="vipID" id="vipID" autocomplete="off" required /></span>
+				</p>
+				<p>
+					<span class="title">设置密码</span>
+					<span class="content"><input type="password" name="pwd-setting" id="pwd-setting" autocomplete="off" required /></span>
+				</p>
+				<p>
+					<span class="title">确认密码</span>
+					<span class="content"><input type="password" name="pwd-confirm" id="pwd-confirm" autocomplete="off" required /></span>
+				</p>
+			</div>
+			<div class="infoPart">
+				<h4>个人信息</h4>
+				<p>
+					<span class="title">姓名</span>
+					<span class="content"><input type="text" name="name" id="name" autocomplete="off" required /></span>
+				</p>
+				<p>
+					<span class="title">性别</span>
+					<span class="content">
+						<label><input type="radio" name="sex" id="male" value="male" autocomplete="off" required />男</label>
+						<label><input type="radio" name="sex" id="female" value="female" autocomplete="off" required />女</label>
+					</span>
+				</p>
+				<p>
+					<span class="title">出生日期</span>
+					<span class="content"><input type="date" name="birthday" id="birthday" autocomplete="off" required /></span>
+				</p>
+				<p>
+					<span class="title">手机号码</span>
+					<span class="content"><input type="tel" name="Tel" id="Tel" autocomplete="off" required /></span>
+				</p>
+				<p>
+					<span class="title">电子邮箱</span>
+					<span class="content"><input type="email" name="email" id="email" autocomplete="off" required /></span>
+				</p>
+				<p>
+					<span class="title">兴趣爱好</span>
+					<span class="content">
+						<input type="checkbox" name="hobby" id="read" />读书
+						<input type="checkbox" name="hobby" id="swimming" />游泳
+						<input type="checkbox" name="hobby" id="basketball" />篮球
+						<input type="checkbox" name="hobby" id="others" />其他
+					</span>
+				</p>
+			</div>
+			<div class="sumbitPart">
+				<p>
+					<input type="checkbox" name="userRights-confirm" id="userRights-confirm" value="confirmd" required />
+					点击此处，同意用户权限声明
+				</p>
+				<p>
+					<input type="submit" value="完成注册" />
+					<input type="reset" value="重新填写" />
+				</p>
+			</div>
+		</form>
+	</body>
+</html>

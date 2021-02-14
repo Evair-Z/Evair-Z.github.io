@@ -1,0 +1,86 @@
+*{
+    //border: 1px solid red;
+}
+
+#main_box{
+    width: 1200px;
+    background-color: #F5F5F5;
+    height: 400px;
+    padding: 50px;
+    margin: 100px auto;
+    border-radius: 100px;
+    box-shadow:  41px 41px 82px #dadada, 
+                    -41px -41px 82px #ffffff;
+}
+
+#welcome_box {
+    margin: 0 auto;
+    width: 1000px;
+    height: 200px;
+}
+
+#welcome_box #words_box {
+    float: right;
+    margin-top: 40px;
+}
+
+#welcome_box #words_box p {
+    font-size: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+}
+
+#welcome_box #words_box #cn {
+    font-size: 36px;
+    letter-spacing: 5px;
+}
+
+#welcome_box #icon_img {
+    width: 200px;
+    height: 200px;
+    float: left;
+    background: url(../img/icon_logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;
+}
+
+#welcome_nav {
+    width: 1000px;
+    height: 50px;
+    margin: 100px auto 50px;
+    
+}
+
+#welcome_nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#welcome_nav ul a li{
+    float: left;
+    list-style: none;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #F5F5F5;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 3px;
+    color: black;
+    transition: all .2s;
+}
+
+#welcome_nav ul a li:hover{
+    background-color: #c00000;
+    border: 1px solid #C00000;
+    box-shadow: 3px 10px 20px #ffc4c4;
+    color: whitesmoke;
+    font-weight: bold;
+}

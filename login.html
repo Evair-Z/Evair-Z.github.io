@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="css/generalStyle.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<script type="text/javascript" src="js/login.js"></script>
+	</head>
+	<body>
+		<div class="main">
+			<h3><div id="dotLeft"></div>输入账号密码以登录<div id="dotRight"></div></h3>
+			<form action="login-succeed.html" method="get" onsubmit="return checkAccount();">
+				<p>
+					<input type="text" name="vipID" class="content" id="vipID" placeholder=" " autocomplete="off" required />
+					<label class="title" for="vipID">账号</label>
+				</p>
+				<p>
+					<input type="password" name="vipPwd" class="content" id="vipPwd" placeholder=" " autocomplete="off" required />
+					<label class="title" for="vipPwd">密码</label>
+				</p>
+				<p>
+					<input type="submit" value="登  录"/>
+				</p>
+				<p>
+					<a href="register.html">没有账号，点这里去注册</a>
+				</p>
+			</form>
+		</div>
+	</body>
+</html>

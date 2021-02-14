@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>测试</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				//border: 1px solid red;
+			}
+			body{
+				background-color: #ddd;
+				margin: 0 auto;
+				width: 90%;
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				flex-wrap: wrap;
+			}
+			.image_box{
+				position: relative;
+				/* top: 50%;
+				left: 50%;
+				transform: translate(-50%,-50%); */
+				width: 300px;
+				height: 300px;
+				margin: 20px;
+				border-radius: 40px;
+				box-shadow: 20px 10px 50px #999;
+				overflow: hidden;
+			}
+			img{
+				width: 100%;
+				transition: all .5s;
+			}
+			.image_box:hover img{
+				transform: scale(1.5);
+			}
+			.image_content{
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				padding: 40px;
+				box-sizing: border-box;
+			}
+			.image_content h1{
+				color: #fff;
+				text-transform: uppercase;
+				transform: translateY(20px);
+				transition: all .4s;
+			}
+			.image_box:hover .image_content h1{
+				transform: translateY(0);
+			}
+			.icons{
+				position: absolute;
+				right: 20px;
+				bottom: 20px;
+			}
+			.icons a{
+				width: 30px;
+				height: 30px;
+				display: inline-block;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: 30px;
+				margin: 0 10px;
+				transform: translateY(100px);
+				transition: all ease-in-out;
+			}
+			.icons a svg{
+				width: 100%;
+				height: 100%;
+			}
+			svg path{
+				transition: all ease-in-out .2s;
+			}
+			svg:hover path{
+				fill: red;
+			}
+			.image_box:hover a{
+				transform: translateY(0px);
+			}
+			.icons a:nth-child(1){
+				transition: 0.4s;
+			}
+			.icons a:nth-child(2){
+				transition: 0.6s;
+			}
+			.icons a:nth-child(3){
+				transition: 0.8s;
+			}
+			.image_content::before{
+				content: "1 ";
+				display: block;
+				position: absolute;
+				bottom: -10px;
+				left: 0;
+				width: 100%;
+				height: 0;
+				border: 1px solid white;
+				background-color: whitesmoke;
+				clip-path: polygon(100% 0, 100% 100%, 0 100%);
+				opacity: .1;
+				transition: all ease-in-out .25s;
+			}
+			.image_box:hover .image_content::before{
+				height: 160px;
+				opacity: .7;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			for(var i=1; i<80; i++){
+				var strImg = "";
+				strImg = strImg + "<div class='image_box'><img src='img/myPhoto/item_img%20(" + i + ").jpg'><div class='image_content'><div class='icons'><a href='#' class='icon_like'><svg t='1589855720736' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='1228' width='200' height='200'><path fill='#333' d='M884.875894 423.143253 646.970506 423.143253c92.185562-340.464205-63.516616-357.853247-63.516616-357.853247-65.993017 0-52.312436 52.182476-57.3031 60.881602 0 166.502152-176.849824 296.971645-176.849824 296.971645l0 472.171899c0 46.607504 63.516616 63.393819 88.433098 63.393819l357.452111 0c33.641191 0 61.036122-88.224344 61.036122-88.224344 88.434122-300.70569 88.434122-390.177444 88.434122-390.177444C944.657442 418.179195 884.875894 423.143253 884.875894 423.143253L884.875894 423.143253 884.875894 423.143253zM884.875894 423.143253' p-id='1229'></path><path fill='#333' d='M251.671415 423.299819 109.214912 423.299819c-29.420053 0-29.873378 28.89612-29.873378 28.89612l29.420053 476.202703c0 30.309306 30.361495 30.309306 30.361495 30.309306L262.420223 958.707948c25.686009 0 25.458835-20.049638 25.458835-20.049638L287.879058 459.411271C287.879058 422.837284 251.671415 423.299819 251.671415 423.299819L251.671415 423.299819 251.671415 423.299819zM251.671415 423.299819' p-id='1230'></path></svg></a><a href='#' class='icon_comment'><svg t='1589855892225' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='1179' width='200' height='200'><path fill='#333' d='M960 512C960 759.424 759.424 960 512 960 428.64 960 350.848 936.832 284 897.152L99.232 949.952C83.872 954.304 69.664 940.128 74.048 924.768L126.848 740C87.168 673.152 64 595.36 64 512 64 264.576 264.576 64 512 64 759.424 64 960 264.576 960 512' p-id='1180'></path></svg></a><a href='#' class='icon_share'><svg t='1589855916760' class='icon' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg' p-id='1206' width='200' height='200'><path fill='#333' d='M71.9 909.8c-2.2 8.4-12.5 5.9-11.9-2.9 13.1-187 71.1-284.1 128.1-352.8C274.7 449.9 469.8 352.7 604 341.3c10.6-0.9 18.9-11.7 18.9-24.8V157.9c0-21.7 21.1-32.9 34.1-18.2l299.5 339.5c9 10.2 8.6 27.6-0.8 37.2L662 817.6c-13.2 13.5-33.3 2-33.3-19V604.3c0-12.9-8.1-23.7-18.6-24.7-85.7-8.5-287.5 10.3-369.1 70.2-34.8 25.4-129.8 112.4-169.1 260z' p-id='1207'></path></svg></a></div></div></div>"
+				document.write(strImg);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,120 @@
+*{//border: 1px solid red;}
+body {
+	background-color: #F5F5F5;
+	height: 80vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.main {
+	width: max-content;
+}
+
+#dotLeft,#dotRight {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	background-color: #C00000;
+	border-radius: 10px;
+	position: absolute;
+}
+
+#dotLeft{
+	top: 15px;
+	left: -30px;
+}
+
+#dotRight{
+	top: 15px;
+	right: -30px;
+}
+
+h3 {
+	margin: 50px auto;
+	width: max-content;
+	text-align: center;
+	font-size: 30px;
+	font-weight: 100;
+	position: relative;
+}
+
+p {
+	position: relative;
+	line-height: 3em;
+	text-align: center;
+	width: 220px;
+}
+
+form {
+	width: max-content;
+	margin: 10px auto;
+}
+
+input {
+	background-color: #F5F5F5;
+	border: 1px solid #DADADA;
+	outline: none;
+}
+
+.title {
+	position: absolute;
+	top: 0px;
+	left: 20px;
+	text-align: center;
+	width: max-content;
+	color: #5E5E5E;
+	letter-spacing: 10px;
+	transition: all ease-in-out 0.2s;
+}
+
+.content {
+	height: 30px;
+	color: #5E5E5E;
+	width: 100%;
+	border-radius: 30px;
+	text-align: center;
+	font-size: 14px;
+	transition: all ease-in-out 0.2s;
+}
+
+.content:focus {
+	border: 2px solid #C00000;
+}
+
+.content:focus + .title{
+	font-weight: bold;
+	transform: translateX(-150%);
+}
+
+.content:not(:focus):not(:placeholder-shown) + .title {
+  color: rgba(0, 0, 0, 0);
+}
+
+input[type="submit"] {
+	width: 100px;
+	height: 40px;
+	border-radius: 40px;
+	cursor: pointer;
+	border: none;
+	background-color: #C00000;
+	font-weight: bold;
+	color: white;
+	margin: 50px auto 0;
+	transition: all ease-in-out 0.2s;
+}
+
+input[type="submit"]:hover {
+	box-shadow: 0px 5px 20px 0px #FFC4C4;
+}
+
+a {
+	text-decoration: none;
+	color: #C00000;
+}
+
+a:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}

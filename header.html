@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>header</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/generalStyle.css"/>
+	<link rel="stylesheet" type="text/css" href="css/header.css"/>
+	<body>
+		<header>
+			<a href="index.html" target="_parent"><div class="myLogo"></div></a>
+			<nav>
+				<ul>
+					<li id="myResume.html"><a href="myResume.html" target="_parent">个人简历</a></li>
+					<li id="myWorks.html"><a href="myWorks.html" target="_parent">作品展示</a></li>
+					<li id="myTools.html"><a href="myTools.html" target="_parent">小小工具</a></li>
+					<li id="myVlog.html"><a href="myVlog.html" target="_parent">我的VLOG</a></li>
+					<li id="myPhoto.html"><a href="myPhoto.html" target="_parent">照片影集</a></li>
+					<li id="myContact.html"><a href="myContact.html" target="_parent">与我联系</a></li>
+				</ul>
+			</nav>
+			<div id="vipAccount">
+				<a href="register.html" target="_parent">注册</a>
+				<a href="login.html" target="_parent">登录</a>
+			</div>
+			<div id="logged">
+				<a href="#" id="vipID">已登录</a>
+				<a href="#" id="exit" onclick="loginStatusFalse()">退出</a>
+			</div>
+		</header>
+		<script type="text/javascript">
+			//检查登录状态
+			var loginStatus = localStorage.getItem("loginStatus");
+			var logged = document.getElementById("logged");
+			var vipAccount = document.getElementById("vipAccount");
+			if(loginStatus=="true"){
+				logged.setAttribute("class","logged-show");
+				vipAccount.setAttribute("class","vipAccount-hidden");
+			}else{
+				logged.setAttribute("class","logged-hidden");
+				vipAccount.setAttribute("class","vipAccount-show");
+			}
+			
+			//获取当前登录账户并显示出来
+			var currentVipID = localStorage.getItem("currentVipID");
+			var loggedVipID = document.getElementById("vipID");
+			loggedVipID.innerHTML = "当前账户：" + currentVipID;
+			
+			//点击退出时:将loginStatus改为false;将currentVipID改为none;
+			function loginStatusFalse(){
+				localStorage.setItem("loginStatus","false");
+				localStorage.setItem("currentVipID","none");
+				location.reload();
+			}
+			
+		</script>
+	</body>
+</html>

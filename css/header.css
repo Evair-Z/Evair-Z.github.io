@@ -1,0 +1,124 @@
+header {
+	background-color: #303030;
+	position: relative;
+	min-width: 1200px;
+}
+
+.myLogo{
+	width: 120px;
+	height: 60px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 150px;
+	background-image: url(../img/icon_logo_transparent.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 80px;
+}
+
+nav {
+	position: relative;
+	height: 60px;
+	width: max-content;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+}
+
+nav li {
+	float: left;
+	margin: 20px;
+	width: 100px;
+	text-align: center;
+	list-style: none;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 50px;
+	transition: all 0.2s;
+}
+
+nav li:hover {
+	background-color: #C00000;
+}
+
+.current-marked{
+	background-color: #C00000;
+}
+
+nav a {
+	text-decoration: none;
+	letter-spacing: 2px;
+	color: #f5f5f5;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#vipAccount,
+#logged {
+	position: absolute;
+	right: 40px;
+	top: 18px;
+}
+
+#vipAccount a {
+	font-size: 12px;
+	color: #F5F5F5;
+	text-decoration: none;
+	margin: 5px;
+	line-height: 20px;
+	border: 1px solid #F5F5F5;
+	border-radius: 20px;
+	padding: 5px 10px;
+}
+
+#vipAccount a:hover {
+	color: #303030;
+	background-color: #F5F5F5;
+	font-weight: bolder;
+	transition: all 0.2s;
+}
+
+.vipAccount-show {
+	display: block;
+}
+
+.vipAccount-hidden {
+	display: none;
+}
+
+.logged-show {
+	display: block;
+}
+
+.logged-hidden {
+	display: none;
+}
+
+#logged #exit {
+	font-size: 12px;
+	color: #F5F5F5;
+	background-color: #C00000;
+	text-decoration: none;
+	margin: 5px;
+	line-height: 20px;
+	border: 1px solid #C00000;
+	border-radius: 20px;
+	padding: 5px 10px;
+}
+
+#logged #exit:hover {
+	color: #F5F5F5;
+	background-color: #C00000;
+	font-weight: bolder;
+}
+
+#logged #vipID{
+	color: #F5F5F5;
+	background-color: none;
+	text-decoration: none;
+}
+
+#logged #vipID:hover{
+	text-decoration: underline;
+}

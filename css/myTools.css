@@ -1,0 +1,74 @@
+.main {
+	width: 80%;
+	min-width: 1210px;
+	height: 80vh;
+	margin: 80px auto;
+}
+
+.clock_container {
+	width: 500px;
+	height: 600px;
+	min-height: 600px;
+	float: left;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+canvas {
+	background: linear-gradient(145deg, #ffffff, #dde1e5);
+	box-shadow: inset 20px 20px 60px #d0d0d0,
+		inset -20px -20px 60px #ffffff;
+	border-radius: 60px;
+}
+
+.drag_container {
+	width: 700px;
+	height: 600px;
+	min-height: 600px;
+	float: right;
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	align-content: space-between;
+}
+
+.drag_target,
+.drag_source {
+	width: 700px;
+	height: 280px;
+	background: linear-gradient(145deg, #ffffff, #dde1e5);
+	box-shadow: inset 20px 20px 60px #d0d0d0,
+		inset -20px -20px 60px #ffffff;
+	border-radius: 60px;
+	box-sizing: border-box;
+	padding: 20px;
+	position: relative;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.drag_source p {
+	width: 350px;
+	padding: 10px 20px;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	position: absolute;
+	top: -18px;
+	background-color: #C00000;
+	box-shadow: 3px 10px 20px #FFC4C4,
+		-3px -10px 20px #ffffff;
+	border-radius: 20px;
+}
+
+.drag_target img,
+.drag_source img {
+	width: 200px;
+	height: 200px;
+	border-radius: 20px;
+	box-shadow: 20px 20px 60px #9f9f9f,
+		-20px -20px 60px #ffffff;
+	cursor: pointer;
+}

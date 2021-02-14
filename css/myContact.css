@@ -1,0 +1,96 @@
+#main_box {
+	width: 80%;
+	background-color: #F5F5F5;
+	min-height: 400px;
+	padding: 50px 0;
+	margin: 100px auto;
+	border-radius: 100px;
+	box-shadow: 41px 41px 82px #dadada,
+		-41px -41px 82px #ffffff;
+}
+
+#contact_box {
+	margin: 0 auto;
+	width: 80%;
+	min-height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-wrap: nowrap;
+	flex-direction: row;
+
+}
+
+#icon_img {
+	width: 150px;
+	height: 150px;
+	background: url(../img/icon_logo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 150px;
+}
+
+#main_title p {
+	font-size: 40px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 100;
+	margin-left: 50px;
+}
+
+#main_title #cn {
+	font-size: 30px;
+	letter-spacing: 5px;
+}
+
+#contact_methods_box {
+	width: 80%;
+	min-height: 200px;
+	margin: 20px auto 10px;
+	border-top: 1px solid #DADADA;
+	border-bottom: 1px solid #DADADA;
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.contact_method {
+	display: block;
+	width: 20%;
+	min-width: 25%;
+	max-width: 50%;
+	min-height: 200px;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.contact_img {
+	width: 80px;
+	height: 80px;
+}
+
+.contact_detail {
+	width: 80%;
+	max-width: 200px;
+	min-width: 100px;
+	word-wrap: break-word;
+	height: max-content;
+	display: block;
+	text-align: center;
+	letter-spacing: 2px;
+	line-height: 30px;
+}
+
+b:hover {
+	background-color: #C00000;
+	color: #F5F5F5;
+}
+
+em:hover {
+	background-color: #C00000;
+	color: #F5F5F5;
+}

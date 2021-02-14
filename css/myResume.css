@@ -1,0 +1,211 @@
+* {
+	margin: 0;
+	padding: 0;
+	border-radius: 60px;
+}
+
+#main {
+	width: 1200px;
+	margin: 90px auto 30px;
+	height: 1550px;
+}
+
+section {
+	float: left;
+	background-color: #F5F5F5;
+	width: 70%;
+	min-width: 800px;
+	height: 1550px;
+	box-shadow: 41px 41px 82px #dadada,
+		-41px -41px 82px #ffffff;
+}
+
+section table {
+	width: 600px;
+	display: block;
+	margin: 0 auto;
+}
+
+#aside1 {
+	float: right;
+	background-color: #F5F5F5;
+	width: 27%;
+	min-width: 319px;
+	height: 430px;
+	box-shadow: 30px 30px 60px #dadada,
+		-30px -30px 60px #ffffff;
+}
+
+#aside2 {
+	float: right;
+	background-color: #F5F5F5;
+	width: 27%;
+	min-width: 319px;
+	height: 1100px;
+	margin-top: 20px;
+	box-shadow: 30px 30px 60px #dadada,
+		-30px -30px 60px #ffffff;
+}
+
+#tables {
+	width: 80%;
+	margin: 50px auto;
+	line-height: 2em;
+	letter-spacing: 2px;
+	font-size: 14px;
+}
+
+section h3 {
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 20px;
+	background-color: #F5F5F5;
+	box-shadow: 3px 10px 20px #DADADA;
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	margin: 0 auto 20px;
+	color: #000;
+	letter-spacing: 2px;
+}
+
+section h3:hover,
+#aside2 h3:hover {
+	color: #F5F5F5;
+	background-color: #C00000;
+	box-shadow: 3px 10px 20px #ffc4c4;
+}
+
+.fontbold {
+	font-weight: bold;
+}
+
+.fontItalic {
+	font-style: italic;
+}
+
+.width200 {
+	width: 200px;
+	text-align: center;
+}
+
+.tableleft {
+	width: 300px;
+	font-weight: bold;
+}
+
+.lineBefore30 {
+	padding: 30px 0 0 0;
+}
+
+.date {
+	text-align: right;
+	width: 300px;
+}
+
+section hr {
+	margin: 30px auto;
+	width: 600px;
+	height: 1px;
+	border: none;
+	border-top: 1px solid #DADADA;
+}
+
+#myPhoto {
+	width: 200px;
+	height: 200px;
+	margin: 50px auto 30px;
+	background-image: url(../img/myPhoto.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 200px;
+	border-radius: 100px;
+	box-shadow: 10px 10px 20px #DADADA,
+		-10px -10px 20px #FFFFFF;
+}
+
+#myInfo {
+	//border: 1px solid red;
+	width: 300px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#myInfo h1 {
+	font-size: 30px;
+	letter-spacing: 5px;
+	width: 150px;
+	display: block;
+	margin: 0 auto;
+}
+
+#myInfo p {
+	font-size: 14px;
+	letter-spacing: 2px;
+	//padding: 20px 0 0 0;
+	display: block;
+	margin: 20px auto;
+	background-color: #303030;
+	color: #F5F5F5;
+	height: 35px;
+	line-height: 35px;
+	width: 200px;
+}
+
+#mySkills {
+	width: 70%;
+	margin: 0 auto;
+	line-height: 2em;
+	letter-spacing: 2px;
+	font-size: 14px;
+	text-align: justify;
+}
+
+#aside2 h3 {
+	font-size: 16px;
+	text-align: center;
+	margin: 20px auto;
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	color: #000;
+	letter-spacing: 2px;
+	background-color: #F5F5F5;
+	box-shadow: 3px 10px 20px #DADADA;
+}
+
+#leaveMessage #message_box {
+	width: 70%;
+	display: block;
+	margin: 0 auto;
+	//border: 1px solid red;
+	text-align: center;
+	line-height: 50px;
+}
+
+#leaveMessage #message {
+	width: 200px;
+	height: 40px;
+	border: 1px solid #DADADA;
+	background-color: #F5F5F5;
+	font-size: 14px;
+	text-align: center;
+	outline: none;
+}
+
+#leaveMessage #sent {
+	width: 30%;
+	height: 40px;
+	border: 1px solid #F5F5F5;
+	letter-spacing: 2px;
+	display: block;
+	margin: 20px auto;
+	outline: none;
+}
+
+#leaveMessage #sent:hover {
+	background-color: #DADADA;
+	font-weight: bold;
+}
